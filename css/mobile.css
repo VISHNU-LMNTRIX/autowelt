@@ -104,4 +104,68 @@
         line-height: 1.8;
     }
 
+    .brands-section {
+
+        padding: 34px 0 38px;
+    }
+
+
+    .brands-heading {
+
+        margin-bottom: 28px;
+    }
+
+
+    .brands-heading p {
+
+        font-size: 0.72rem;
+
+        letter-spacing: 0.16em;
+    }
+
+
+    .brands-track {
+
+        gap: 64px;
+    }
+
+
+    .brands-track span {
+
+        font-size: 1.35rem;
+    }
+
+    .blog-preview-section {
+
+        padding: 84px 20px 96px;
+    }
+
+
+    .blog-preview-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 42px;
+    }
+
+
+    .blog-preview-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .blog-card-image {
+
+        height: 240px;
+    }
+
+
+    .blog-card h3 {
+
+        font-size: 1.35rem;
+    }
+
 }

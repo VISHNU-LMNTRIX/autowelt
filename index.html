@@ -60,6 +60,11 @@
         href="css/components/brands-section.css"
     >
 
+    <link
+        rel="stylesheet"
+        href="css/components/blog-preview-section.css"
+    />
+
     <!-- PAGE CSS -->
 
     <link
@@ -125,7 +130,7 @@
 
                     <!-- TOP LABEL -->
 
-                    <div class="hero-topline">
+                    <div class="hero-topline reveal">
 
                         <div class="hero-line"></div>
 
@@ -140,28 +145,38 @@
 
                     <!-- HEADLINE -->
 
-                    <h1 class="hero-title">
+                    <h1 class="hero-title text-reveal">
 
-                        PRECISION IN <br>
+                        <div class="hero-line-wrap">
+                            <span class="delay-1">
+                                PRECISION IN
+                            </span>
+                        </div>
 
-                        EVERY <br>
+                        <div class="hero-line-wrap">
+                            <span class="delay-2">
+                                EVERY
+                            </span>
+                        </div>
 
-                        <span class="hero-strike">
+                        <div class="hero-line-wrap">
+                            <span class="hero-strike delay-3">
+                                REFLECTION
+                            </span>
+                        </div>
 
-                            REFLECTION
-
-                        </span>
-
-                        <br>
-
-                        PERFECTION.
+                        <div class="hero-line-wrap">
+                            <span class="delay-4">
+                                PERFECTION.
+                            </span>
+                        </div>
 
                     </h1>
 
 
                     <!-- DESCRIPTION -->
 
-                    <p class="hero-description">
+                    <p class="hero-description reveal delay-2">
 
                         We don't just wash cars; we restore and protect
                         automotive masterpieces using advanced nanotechnology
@@ -172,7 +187,7 @@
 
                     <!-- ACTIONS -->
 
-                    <div class="hero-actions">
+                    <div class="hero-actions reveal delay-3">
 
                         <a
                             href="contact.html"
@@ -206,6 +221,8 @@
 
         <div id="brands-section-container"></div>
 
+        <div id="blog-preview-section-container"></div>
+
 
     </main>
 
@@ -216,6 +233,8 @@
 
 
     <!-- JS -->
+
+    <script src="js/animations.js"></script>
 
     <script src="js/main.js"></script>
 

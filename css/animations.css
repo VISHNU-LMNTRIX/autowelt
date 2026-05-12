@@ -1,45 +1,292 @@
 /* =========================================
-   REVEAL ANIMATION
+   GLOBAL EASING
+========================================= */
+
+:root {
+
+    --ease-premium:
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    --ease-smooth:
+        cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* =========================================
+   BASE REVEAL
 ========================================= */
 
 .reveal {
 
     opacity: 0;
 
-    transform: translateY(40px);
+    transform: translateY(50px);
 
-    animation: revealAnimation 1s ease forwards;
+    transition:
+        opacity 2s var(--ease-premium),
+        transform 2s var(--ease-premium);
+
+    will-change:
+        opacity,
+        transform;
 }
 
 
-.reveal:nth-child(1) {
-    animation-delay: 0.1s;
-}
+.reveal.active {
 
-.reveal:nth-child(2) {
-    animation-delay: 0.3s;
-}
+    opacity: 1;
 
-.reveal:nth-child(3) {
-    animation-delay: 0.5s;
-}
-
-.reveal:nth-child(4) {
-    animation-delay: 0.7s;
-}
-
-.reveal:nth-child(5) {
-    animation-delay: 0.9s;
+    transform: translateY(0);
 }
 
 
-@keyframes revealAnimation {
+/* =========================================
+   DIRECTIONAL REVEALS
+========================================= */
 
-    to {
+.reveal-left {
 
-        opacity: 1;
+    opacity: 0;
 
-        transform: translateY(0);
-    }
+    transform: translateX(-70px);
 
+    transition:
+        opacity 1s var(--ease-premium),
+        transform 1s var(--ease-premium);
+}
+
+
+.reveal-left.active {
+
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+.reveal-right {
+
+    opacity: 0;
+
+    transform: translateX(70px);
+
+    transition:
+        opacity 1s var(--ease-premium),
+        transform 1s var(--ease-premium);
+}
+
+
+.reveal-right.active {
+
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   SCALE REVEAL
+========================================= */
+
+.reveal-scale {
+
+    opacity: 0;
+
+    transform: scale(0.94);
+
+    transition:
+        opacity 1s var(--ease-premium),
+        transform 1s var(--ease-premium);
+}
+
+
+.reveal-scale.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================
+   STAGGER DELAYS
+========================================= */
+
+.delay-1 {
+
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+
+    transition-delay: 0.6s;
+}
+
+.delay-3 {
+
+    transition-delay: 1.0s;
+}
+
+.delay-4 {
+
+    transition-delay: 1.4s;
+}
+
+.delay-5 {
+
+    transition-delay: 1.8s;
+}
+
+
+/* =========================================
+   IMAGE PARALLAX
+========================================= */
+
+.parallax-image {
+
+    transform: scale(1.08);
+
+    transition:
+        transform 1.8s var(--ease-premium);
+}
+
+
+.reveal.active .parallax-image {
+
+    transform: scale(1);
+}
+
+
+/* =========================================
+   PREMIUM HOVER
+========================================= */
+
+.hover-lift {
+
+    transition:
+        transform 0.55s var(--ease-premium),
+        box-shadow 0.55s var(--ease-premium),
+        border-color 0.55s var(--ease-premium);
+}
+
+
+.hover-lift:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.32);
+}
+
+
+/* =========================================
+   HOVER IMAGE ZOOM
+========================================= */
+
+.hover-image {
+
+    overflow: hidden;
+}
+
+
+.hover-image img {
+
+    transition:
+        transform 1.2s var(--ease-premium);
+}
+
+
+.hover-image:hover img {
+
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   TEXT REVEAL
+========================================= */
+
+.hero-line-wrap {
+    overflow: hidden;
+}
+
+.text-reveal span {
+
+    display: inline-block;
+
+    transform: translateY(120%);
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+
+    transition:
+        transform 1s var(--ease-premium),
+        opacity 1s var(--ease-premium);
+}
+
+
+.text-reveal.active span {
+
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+.text-reveal .delay-1 {
+    transition-delay: 0.15s;
+}
+
+.text-reveal .delay-2 {
+    transition-delay: 0.3s;
+}
+
+.text-reveal .delay-3 {
+    transition-delay: 0.45s;
+}
+
+.text-reveal .delay-4 {
+    transition-delay: 0.6s;
+}
+
+
+/* =========================================
+   BUTTON GLOW
+========================================= */
+
+.glow-button {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.glow-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(177,18,23,0.18),
+            transparent 70%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease;
+}
+
+
+.glow-button:hover::before {
+
+    opacity: 1;
 }

@@ -56,4 +56,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         "/components/brands-section.html"
     );
 
+    await loadComponent(
+        "blog-preview-section-container",
+        "/components/blog-preview-section.html"
+    );
+
+    await import("./blog-preview.js");
+
+    if (window.initializeAnimations) {
+
+        window.initializeAnimations();
+
+    }
+
 });
