@@ -1,0 +1,292 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 999;
+
+    background: rgba(18, 20, 20, 0.75);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    transition: all 0.4s ease;
+}
+
+
+.navbar-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 80px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+
+    font-family: var(--font-heading);
+
+    font-size: 1.42rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: var(--on-surface);
+
+    text-transform: uppercase;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+}
+
+.logo-mark {
+
+    color: var(--brand-crimson);
+}
+
+
+/* =========================================
+   DESKTOP LINKS
+========================================= */
+
+.navbar-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 42px;
+
+    list-style: none;
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    font-family: var(--font-heading);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: var(--on-surface-variant);
+
+    transition: var(--transition-medium);
+}
+
+
+.nav-link:hover {
+
+    color: var(--on-surface);
+}
+
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -8px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--brand-crimson);
+
+    transition: width 0.4s ease;
+}
+
+
+.nav-link:hover::after,
+.active-link::after {
+
+    width: 100%;
+}
+
+
+.active-link {
+
+    color: var(--on-surface);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.navbar-actions {
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   MOBILE TOGGLE
+========================================= */
+
+.mobile-menu-toggle {
+
+    display: none;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.mobile-menu-toggle span {
+
+    position: absolute;
+
+    left: 12px;
+
+    width: 24px;
+
+    height: 2px;
+
+    background: white;
+
+    transition: all 0.4s ease;
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+    top: 16px;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+    top: 23px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+    top: 30px;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 90px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(18,20,20,0.98);
+
+    backdrop-filter: blur(30px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    padding: 40px 24px;
+
+    transform: translateY(-120%);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: all 0.5s ease;
+}
+
+
+.mobile-menu.active {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.mobile-menu a {
+
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: var(--on-surface);
+}
+
+
+.mobile-cta {
+
+    margin-top: 16px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .navbar-links,
+    .navbar-actions {
+
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+
+        display: block;
+    }
+
+}

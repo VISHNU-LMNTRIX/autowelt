@@ -1,0 +1,410 @@
+/* =========================================
+   AUTOWELT GLOBAL DESIGN SYSTEM
+========================================= */
+
+/* ===== GOOGLE FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root {
+
+    /* COLORS */
+
+    --surface: #121414;
+    --surface-container: #1e2020;
+    --surface-container-high: #282a2b;
+    --surface-container-low: #1a1c1c;
+
+    --primary: #c9c6c5;
+
+    --brand-crimson: #b91c1c;
+    --brand-crimson-dark: #7f1d1d;
+
+    --brand-silver: #e5e7eb;
+
+    --outline: #8e9192;
+
+    --on-surface: #e2e2e2;
+    --on-surface-variant: #c4c7c7;
+
+    --success: #10b981;
+    --warning: #f59e0b;
+
+    /* TYPOGRAPHY */
+
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-display: "Syne", sans-serif;
+
+    /* SPACING */
+
+    --container-width: 1520px;
+
+    --section-padding-desktop: 120px;
+    --section-padding-mobile: 72px;
+
+    --gutter-desktop: 24px;
+    --gutter-mobile: 20px;
+
+    /* TRANSITIONS */
+
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+    --transition-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: var(--surface);
+
+    color: var(--on-surface);
+
+    font-family: var(--font-body);
+
+    overflow-x: hidden;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================
+   GLOBAL TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--font-heading);
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+
+    color: var(--on-surface-variant);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GLOBAL LINKS
+========================================= */
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   GLOBAL IMAGES
+========================================= */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* =========================================
+   GLOBAL BUTTONS
+========================================= */
+
+.btn-primary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    background: linear-gradient(
+        135deg,
+        var(--brand-crimson),
+        var(--brand-crimson-dark)
+    );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-family: var(--font-heading);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: var(--transition-medium);
+
+    box-shadow:
+        0 10px 30px rgba(185, 28, 28, 0.2);
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(185, 28, 28, 0.35);
+}
+
+
+.btn-secondary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+
+    color: var(--on-surface);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 6px;
+
+    font-family: var(--font-heading);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: var(--transition-medium);
+
+    backdrop-filter: blur(20px);
+}
+
+.btn-secondary:hover {
+
+    border-color: rgba(255,255,255,0.4);
+
+    background: rgba(255,255,255,0.03);
+}
+
+
+/* =========================================
+   GLASSMORPHISM
+========================================= */
+
+.glass {
+
+    background: rgba(30, 32, 32, 0.45);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* =========================================
+   GLOBAL CONTAINER
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin-inline: auto;
+
+    padding-inline: var(--gutter-desktop);
+}
+
+
+/* =========================================
+   SECTION SPACING
+========================================= */
+
+.section {
+
+    padding-block: var(--section-padding-desktop);
+}
+
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(255,255,255,0.2);
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+
+    background: var(--brand-crimson);
+
+    color: white;
+}
+
+
+/* =========================================
+   UTILITY CLASSES
+========================================= */
+
+.text-gradient {
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #8e9192
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.border-gradient {
+
+    position: relative;
+}
+
+.border-gradient::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    padding: 1px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.02)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .container {
+
+        padding-inline: var(--gutter-mobile);
+    }
+
+    .section {
+
+        padding-block: var(--section-padding-mobile);
+    }
+
+}
