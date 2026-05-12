@@ -46,4 +46,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "/components/footer.html"
     );
 
+    await loadComponent(
+        "standards-section-container",
+        "/components/standards-section.html"
+    );
+
 });

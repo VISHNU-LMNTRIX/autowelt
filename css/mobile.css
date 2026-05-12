@@ -51,4 +51,57 @@
         font-size: 1.9rem;
     }
 
+    .standards-section {
+
+        padding: 92px 24px;
+    }
+
+
+    .standards-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 84px;
+
+        margin-top: 72px;
+    }
+
+
+    .standards-section .section-heading h2 {
+
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+
+    .standard-icon {
+
+        width: 74px;
+
+        height: 74px;
+
+        margin-bottom: 26px;
+    }
+
+
+    .standard-icon .material-symbols-outlined {
+
+        font-size: 42px;
+    }
+
+
+    .standard-item h3 {
+
+        font-size: 1.7rem;
+    }
+
+
+    .standard-item p {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
 }
