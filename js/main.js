@@ -51,4 +51,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "/components/standards-section.html"
     );
 
+    await loadComponent(
+        "brands-section-container",
+        "/components/brands-section.html"
+    );
+
 });

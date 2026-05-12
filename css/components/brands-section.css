@@ -1,0 +1,118 @@
+.brands-section {
+
+    position: relative;
+
+    padding: 38px 0 42px;
+
+    background: #050505;
+
+    border-top: 1px solid rgba(255,255,255,0.04);
+
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.brands-heading {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 34px;
+}
+
+
+.brands-heading p {
+
+    font-family: var(--font-heading);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    color: rgba(255,255,255,0.72);
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.brands-marquee {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+.brands-track {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 110px;
+
+    width: max-content;
+
+    animation: brands-scroll 34s linear infinite;
+}
+
+
+/* =========================================
+   BRAND ITEMS
+========================================= */
+
+.brands-track span {
+
+    font-family: var(--font-heading);
+
+    font-size: 2.05rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: rgba(255,255,255,0.18);
+
+    white-space: nowrap;
+
+    transition: color 0.4s ease;
+}
+
+
+.brands-track span:hover {
+
+    color: rgba(255,255,255,0.42);
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes brands-scroll {
+
+    from {
+
+        transform: translateX(0);
+    }
+
+    to {
+
+        transform: translateX(-50%);
+    }
+}
