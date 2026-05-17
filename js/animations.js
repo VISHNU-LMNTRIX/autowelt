@@ -25,13 +25,25 @@ function initializeScrollReveals() {
         },
 
         {
-            threshold: 0.15,
-            rootMargin: "0px 0px -80px 0px"
+            threshold: 0.1,
+            rootMargin: "0px 0px -40px 0px"
         }
 
     );
 
     reveals.forEach((element) => {
+
+        const rect = element.getBoundingClientRect();
+
+        const isInitiallyVisible =
+            rect.top < window.innerHeight - 40 &&
+            rect.bottom > 0;
+
+        if (isInitiallyVisible) {
+
+            element.classList.add("active");
+
+        }
 
         observer.observe(element);
 

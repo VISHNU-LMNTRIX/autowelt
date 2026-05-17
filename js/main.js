@@ -33,35 +33,51 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await loadComponent(
         "navbar-container",
-        "/components/navbar.html"
+        "components/navbar.html"
     );
+
+    if (window.initializeNavbar) {
+
+        window.initializeNavbar();
+
+    }
 
     await loadComponent(
         "services-section-container",
-        "/components/services-section.html"
+        "components/services-section.html"
     );
 
     await loadComponent(
         "footer-container",
-        "/components/footer.html"
+        "components/footer.html"
     );
 
     await loadComponent(
         "standards-section-container",
-        "/components/standards-section.html"
+        "components/standards-section.html"
     );
 
     await loadComponent(
         "brands-section-container",
-        "/components/brands-section.html"
+        "components/brands-section.html"
     );
 
     await loadComponent(
         "blog-preview-section-container",
-        "/components/blog-preview-section.html"
+        "components/blog-preview-section.html"
     );
 
-    await import("./blog-preview.js");
+    if (document.getElementById("blog-preview-section-container")) {
+
+        await import("./blog-preview.js");
+
+    }
+
+    if (window.initializeNavbar) {
+
+        window.initializeNavbar();
+
+    }
 
     if (window.initializeAnimations) {
 

@@ -6,7 +6,7 @@ const blogGrid =
 
 if (blogGrid) {
 
-    blogGrid.innerHTML = blogPosts.map((post, index) => `
+    blogGrid.innerHTML = blogPosts.slice(0, 2).map((post, index) => `
 
         <article class="reveal-scale delay-${index + 1}">
 

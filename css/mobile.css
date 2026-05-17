@@ -36,6 +36,27 @@
         margin-left: 2px;
     }
 
+    .navbar-container {
+
+        padding-inline: 20px;
+    }
+
+
+    .navbar-logo {
+
+        flex-shrink: 0;
+
+        font-size: 1.05rem;
+
+        letter-spacing: 0.10em;
+    }
+
+
+    .mobile-menu-toggle {
+
+        flex: 0 0 48px;
+    }
+
     .services-grid {
 
         grid-template-columns: 1fr;
@@ -166,6 +187,333 @@
     .blog-card h3 {
 
         font-size: 1.35rem;
+    }
+
+    .page-hero {
+
+        min-height: 560px;
+
+        padding-top: 118px;
+
+        padding-bottom: 74px;
+    }
+
+
+    .compact-hero {
+
+        min-height: 340px;
+    }
+
+
+    .product-hero,
+    .contact-hero {
+
+        min-height: 390px;
+    }
+
+
+    .page-hero-content h1 {
+
+        font-size: 2.6rem;
+
+        line-height: 1.08;
+
+        letter-spacing: 0.05em;
+    }
+
+
+    .page-hero-content p {
+
+        font-size: 0.96rem;
+    }
+
+
+    .service-detail-row,
+    .service-detail-row-reverse {
+
+        grid-template-columns: 1fr;
+
+        gap: 44px;
+
+        padding: 74px 20px;
+    }
+
+
+    .service-detail-row-reverse .service-detail-copy {
+
+        order: 0;
+    }
+
+
+    .service-detail-copy h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .quote-section {
+
+        padding: 82px 20px 94px;
+    }
+
+
+    .quote-form,
+    .contact-panel,
+    .booking-panel,
+    .product-detail-panel {
+
+        padding: 24px;
+    }
+
+
+    .form-grid,
+    .product-spec-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .product-section {
+
+        padding-block: 56px 28px;
+    }
+
+
+    .section-toolbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 32px;
+    }
+
+
+    .product-category-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-category-card {
+
+        height: 220px;
+    }
+
+
+    .product-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .product-card {
+
+        min-height: 390px;
+
+        padding: 20px;
+    }
+
+
+    .product-detail-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+
+    .product-visual-large {
+
+        height: 360px;
+    }
+
+
+    .product-detail-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .blog-feature {
+
+        min-height: 650px;
+
+        padding: 126px 20px 48px;
+    }
+
+
+    .blog-feature-panel {
+
+        padding: 28px;
+    }
+
+
+    .blog-feature-panel h1 {
+
+        font-size: 2.2rem;
+    }
+
+
+    .blog-filter-inner {
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .blog-search {
+
+        width: 100%;
+    }
+
+
+    .blog-feed {
+
+        padding-block: 64px 88px;
+    }
+
+
+    .blog-grid,
+    .article-card-wide {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .article-card-wide {
+
+        grid-column: span 1;
+    }
+
+
+    .article-card-wide .article-image,
+    .article-image {
+
+        height: 260px;
+    }
+
+
+    .article-card-wide .article-copy,
+    .article-copy {
+
+        padding: 26px;
+    }
+
+
+    .article-modal-panel {
+
+        padding: 32px 24px;
+    }
+
+
+    .about-story,
+    .studio-grid,
+    .values-section,
+    .contact-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-story,
+    .values-section {
+
+        padding-block: 78px;
+    }
+
+
+    .about-image-card {
+
+        padding: 24px;
+    }
+
+
+    .studio-section {
+
+        padding-block: 78px;
+    }
+
+
+    .studio-grid img {
+
+        height: 300px;
+    }
+
+
+    .contact-layout {
+
+        margin-top: -34px;
+
+        padding-bottom: 82px;
+    }
+
+
+    .booking-panel {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-card {
+
+        min-height: auto;
+    }
+
+
+    .blog-feature-panel h1,
+    .page-hero-content h1 {
+
+        font-size: 1.82rem;
+
+        letter-spacing: 0.04em;
+    }
+
+
+    .contact-hero .page-hero-content h1 {
+
+        max-width: 320px;
+
+        margin-inline: auto;
+
+        line-height: 1.14;
+    }
+
+
+    .article-copy small {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .whatsapp-float {
+
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 54px;
+
+        height: 54px;
     }
 
 }

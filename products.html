@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | AUTOWELT Performance Arsenal</title>
+    <meta
+        name="description"
+        content="Browse AUTOWELT professional-grade automotive detailing products, coatings, compounds, interior care, and studio tools for premium vehicle preservation."
+    >
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="products-page">
+    <div id="navbar-container"></div>
+
+    <main>
+        <section class="page-hero product-hero compact-hero">
+            <div class="page-hero-bg">
+                <img src="assets/images/ceramic_coating.png" alt="AUTOWELT detailing product finish">
+            </div>
+            <div class="page-hero-overlay"></div>
+
+            <div class="container page-hero-content text-reveal">
+                <div class="hero-line-wrap">
+                    <h1 class="delay-1">Performance Arsenal</h1>
+                </div>
+                <p class="reveal delay-2">
+                    Engineered formulations for the preservation and enhancement of
+                    automotive art. Uncompromising quality for absolute perfection.
+                </p>
+            </div>
+        </section>
+
+        <section class="product-section container">
+            <div class="section-toolbar reveal">
+                <h2>Select Category</h2>
+                <button id="view-all-categories" type="button">
+                    View All Categories
+                </button>
+            </div>
+
+            <div class="product-category-grid" id="product-category-grid"></div>
+        </section>
+
+        <section class="product-section container">
+            <div class="section-toolbar reveal">
+                <h2 id="product-heading">Paint Care Formulation</h2>
+                <p id="product-count">Showing 4 Items</p>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+            <div class="pagination" id="product-pagination"></div>
+            <div id="product-detail-mount"></div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/category-toggle.js"></script>
+</body>
+
+</html>

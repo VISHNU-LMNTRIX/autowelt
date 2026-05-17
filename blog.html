@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | AUTOWELT Detailing Journal</title>
+    <meta
+        name="description"
+        content="Read AUTOWELT detailing guides, case studies, and automotive preservation insights from Kochi, Kerala."
+    >
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="blog-page">
+    <div id="navbar-container"></div>
+
+    <main>
+        <section class="blog-feature" id="featured-article"></section>
+
+        <section class="blog-filter-bar">
+            <div class="container blog-filter-inner">
+                <div id="blog-categories" class="blog-categories"></div>
+                <label class="blog-search">
+                    <span class="material-symbols-outlined">search</span>
+                    <input id="blog-search" type="search" placeholder="Search articles...">
+                </label>
+            </div>
+        </section>
+
+        <section class="blog-feed container">
+            <div class="blog-grid" id="blog-grid"></div>
+            <div class="pagination" id="blog-pagination"></div>
+        </section>
+    </main>
+
+    <aside class="article-modal" id="article-modal" aria-hidden="true">
+        <div class="article-modal-panel">
+            <button type="button" class="article-modal-close" data-close-article aria-label="Close article">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="article-modal-body"></div>
+        </div>
+    </aside>
+
+    <div id="footer-container"></div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/blog-page.js"></script>
+</body>
+
+</html>
