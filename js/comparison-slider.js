@@ -23,7 +23,7 @@ export function initializeComparisonSliders(root = document) {
 
             const percent = `${position * 100}%`;
 
-            overlay.style.width = percent;
+            slider.style.setProperty("--comparison-position", percent);
 
             handle.style.left = percent;
 

@@ -8,16 +8,25 @@
 
         min-height: auto;
 
-        padding-top: 140px;
+        padding-top: 128px;
 
-        padding-bottom: 100px;
+        padding-bottom: 88px;
+    }
+
+    .hero-content {
+
+        padding-left: 0;
     }
 
     .hero-title {
 
-        font-size: 3.4rem;
+        max-width: 100%;
 
-        line-height: 0.95;
+        font-size: clamp(2.6rem, 7.6vw, 4.2rem);
+
+        line-height: 1;
+
+        letter-spacing: 0;
     }
 
     .hero-description {
@@ -64,7 +73,23 @@
 
     .service-card {
 
-        height: 320px;
+        min-height: 380px;
+
+        height: auto;
+    }
+
+
+    .service-content {
+
+        padding: 28px;
+    }
+
+
+    .service-reveal {
+
+        opacity: 1;
+
+        transform: none;
     }
 
     .section-heading h2 {
@@ -242,6 +267,20 @@
     .service-detail-row-reverse .service-detail-copy {
 
         order: 0;
+    }
+
+
+    .service-detail-media {
+
+        display: none;
+    }
+
+
+    .service-detail-mobile-media {
+
+        display: block;
+
+        margin: 28px 0 32px;
     }
 
 
@@ -424,7 +463,7 @@
     .about-story,
     .values-section {
 
-        padding-block: 78px;
+        padding-block: 44px 78px;
     }
 
 
@@ -464,6 +503,26 @@
 }
 
 
+@media (max-width: 1024px) {
+
+    .mobile-menu {
+
+        top: 80px;
+
+        padding: 28px 24px 34px;
+    }
+
+
+    .about-hero {
+
+        min-height: 440px;
+
+        padding-bottom: 44px;
+    }
+
+}
+
+
 @media (max-width: 700px) {
 
     .product-grid {
@@ -484,6 +543,12 @@
         font-size: 1.82rem;
 
         letter-spacing: 0.04em;
+    }
+
+
+    .hero-title {
+
+        font-size: clamp(1.84rem, 7.5vw, 2.18rem);
     }
 
 

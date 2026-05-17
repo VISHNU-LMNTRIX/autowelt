@@ -80,6 +80,13 @@ function renderServices() {
                 </p>
 
                 <h2>${service.title}</h2>
+
+                <article class="service-detail-mobile-media">
+                    <div class="service-comparison-card">
+                        ${renderComparison(service)}
+                    </div>
+                </article>
+
                 <p class="service-detail-description">${service.description}</p>
 
                 <ul class="service-feature-list">
@@ -91,7 +98,7 @@ function renderServices() {
                 </a>
             </div>
 
-            <article class="reveal-scale delay-1">
+            <article class="service-detail-media reveal-scale delay-1">
                 <div class="service-comparison-card hover-lift">
                     ${renderComparison(service)}
                 </div>
